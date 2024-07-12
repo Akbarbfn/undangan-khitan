@@ -511,19 +511,13 @@ figure {
 #overlay {
   background: #ffffff;
   background-image: url("../images/overlayy.svg");
-  background-size: contain;
-  background-position: center;
+  background-size: cover;
   height: 100%;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2000;
-}
-@media screen and (max-width: 768px) {
-  #overlay {
-    background-size: cover;
-  }
 }
 #overlay .content {
   background: rgba(0, 0, 0, 0.7);
