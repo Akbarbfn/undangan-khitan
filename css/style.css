@@ -508,7 +508,6 @@ figure {
   margin-top: 50px;
   margin-bottom: 0 !important;
 }
-
 #overlay {
   background: #ffffff;
   background-image: url("../images/overlayy.svg");
@@ -519,6 +518,11 @@ figure {
   top: 0;
   left: 0;
   z-index: 2000;
+}
+@media screen and (max-width: 480px) {
+  #overlay {
+    background-size: contain;
+  }
 }
 #overlay .content {
   background: rgba(0, 0, 0, 0.7);
