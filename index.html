@@ -98,18 +98,27 @@
 						<h1>Muhammad Al Fatih</h1>
 						<p style="margin-bottom: 0">Kepada Bapak/Ibu/Saudara/i</p>
 						<p>Kami Mengundang Anda Untuk Hadir Di Acara Tasyakuran Khitan Anak Kami.</p>
-
-						<button class="btn btn-primary" id="open-invitation">Buka Undangan</button>
+						<button class="btn btn-primary" id="open-invitation" onclick="playAudio();">Buka Undangan</button>
+						<audio id="audio" style="display:none;">
+							<source src="audio/ikan.mp3" type="audio/mpeg">
+						</audio>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
+	<script>
+		function playAudio() {
+			var audio = document.getElementById('audio');
+			audio.play();
+		}
+	</script>
+
 	<div id="fh5co-header" class="animated-section" style="background: url('images/background/repeat-background/witewall_3.png'); background-repeat:repeat; background-size: cover; position: relative;">
 		<div class="container">
-			<img class="flower-1" style="position: absolute; right: 0; top: 0; width: 250px; height: 250px;" src="images/background/flowers/atas-kanann.svg">
-			<img class="flower-1" style="position: absolute; left: 0; top: 0; width: 250px; height: 250px;" src="images/background/flowers/atas-kirii.svg">
+			<img class="flower-1" style="position: absolute; right: 0; top: 0; width: 185px; height: 185px;" src="images/background/flowers/atas-kanann.svg">
+			<img class="flower-1" style="position: absolute; left: 0; top: 0; width: 185px; height: 185px;" src="images/background/flowers/atas-kirii.svg">
 			<img class="flower-1" style="position: absolute; right: 0; bottom: 0; height: 220px;" src="">
 			<img class="flower-1" style="position: absolute; left: 0; bottom:0; height: 220px;" src="">
 			<div class="row">
@@ -167,7 +176,7 @@
 									<span style="font-size: 1.4em;">Gambus El Corona</span>
 								</div>
 								<div class="event-col" style="display: flex; align-items: center; margin-bottom: 15px; white-space: nowrap;">
-									<i class="icon-shirt" style="margin-right: 20px; font-size: 1.8em;"></i>
+									<img src="images/baju.png" style="margin-right: 20px; width: 1.8em; height: 1.8em;" alt="icon baju">
 									<span style="font-size: 1.4em;">Betawi Modern</span>
 								</div>
 							</div>
@@ -183,8 +192,8 @@
 	</div>
 	<footer id="fh5co-footer" role="contentinfo" class="animated-section" style="background: url('images/background/repeat-background/witewall_3.png'); background-repeat:repeat; background-size: cover; position: relative;">
 		<div class="container">
-			<img class="flower-1" style="position: absolute; right: 0; bottom: 0; height: 250px; z-index: 1;" src="images/background/flowers/bawah-kanann.svg">
-			<img class="flower-1" style="position: absolute; left: 0; bottom:0; height: 250px; z-index: 1;" src="images/background/flowers/bawah-kirii.svg">
+			<img class="flower-1" style="position: absolute; right: 0; bottom: 0; height: 175px; z-index: 1;" src="images/background/flowers/bawah-kanann.svg">
+			<img class="flower-1" style="position: absolute; left: 0; bottom:0; height: 175px; z-index: 1;" src="images/background/flowers/bawah-kirii.svg">
 			<div class="row copyright animate-box" style="position: relative; z-index: 2;">
 				<div class="col-md-12 text-center">
 					<p>
@@ -273,6 +282,7 @@
 		for (var i = 0; i < c.length; i++) {
 			c[i].classList.add('animate');
 		}*/
+		document.getElementById('audio').play();
 	});
 
 	$.get( "https://api.github.com/repos/ngodingsolusi/the-wedding-of-rehan-maulidan/issues?state=all&per_page", function( data ) {
@@ -475,6 +485,10 @@
 	// Since we are using dynamic mode, we need to programmatically open lightGallery
 	inlineGallery.openGallery();
 </script>
+
+</body>
+</html>
+
 
 </body>
 </html>
